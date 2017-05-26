@@ -1,3 +1,4 @@
+
 function [bit_rx] = demapping(symb_rx,Nbps,modulation)
 
 % INPUTS:
@@ -18,6 +19,7 @@ switch modulation,
         % Symbol to integer
         sigma = sqrt(sum(([0:2^Nbps-1]-(2^Nbps-1)/2).^2)/2^Nbps); 
         int_rx = sigma * symb_rx + (2^Nbps-1)/2;
+        int_rx = real(int_rx);
 
         % Integer detection
         int_det=round(int_rx);
