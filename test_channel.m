@@ -1,9 +1,8 @@
-function [BER]= test_channel(mod_input,Nbps_input,EbN0_input)
 %% input parameters
-%  clear; clc; close all;
-%  mod_input = 'pam'; % ['pam','qam','qpsk','bpsk']
-%  Nbps_input = 1; %[1,4,6,2,1]
-%  EbN0_input = 10;
+clear; clc; close all;
+mod_input = 'pam'; % ['pam','qam','qpsk','bpsk']
+Nbps_input = 1; %[1,4,6,2,1]
+EbN0_input = 10;
 
 %% modulation parameters
 Modu.mod = mod_input; 
